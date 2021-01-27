@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Code-Pointer Integrity - BigBang019
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>BigBang019</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Code-Pointer Integrity
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-01-19 17:12:16</span></span>
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>Abstract<br>Systems code is often written in low-level languages like C/C++, which offer many benefits but also delegate memory management to programmers. This invites memory safety bugs that attackers can exploit to divert control flow and compromise the system. Deployed defense mechanisms (e.g., ASLR, DEP) are incomplete, and stronger defense mechanisms (e.g., CFI) often have high overhead and limited guarantees [19, 15, 9]. We introduce code-pointer integrity (CPI), a new design point that guarantees the integrity of all code pointers in a program (e.g., function pointers, saved return addresses) and thereby prevents all control-flow hijack attacks, including return-oriented programming. We also introduce code-pointer separation (CPS), a relaxation of CPI with better performance properties. CPI and CPS offer substantially better security-to-overhead ratios than the state of the art, they are practical (we protect a complete FreeBSD system and over 100 packages like apache and postgresql), effective (prevent all attacks in the RIPE benchmark), and efficient: on SPEC CPU2006, CPS averages 1.2% overhead for C and 1.9% for C/C++, while CPI’s overhead is 2.9% for C and 8.4% for C/C++. A prototype implementation of CPI and CPS can be obtained from <a target="_blank" rel="noopener" href="http://levee.epfl.ch/">http://levee.epfl.ch</a>.</p>
+<p>系统代码通常用C / C ++之类的低级语言编写，这提供了很多好处，但也将内存管理委托给程序员。这会引发内存安全漏洞，攻击者可以利用这些漏洞转移控制流并破坏系统。部署的防御机制（例如ASLR，DEP）是不完整的，而更强大的防御机制（例如CFI）通常具有较高的开销和有限的保证[19、15、9]。我们引入了代码指针完整性（CPI），这是一个新的设计点，可以保证程序中所有代码指针（例如，函数指针，保存的返回地址）的完整性，从而防止所有控制流劫持攻击，包括面向返回的编程。我们还引入了代码指针分隔（CPS），这是CPI的放松，具有更好的性能。 CPI和CPS提供的安全性与开销的比率比现有技术要好得多，它们是实用的（我们保护完整的FreeBSD系统以及超过100个软件包，如apache和postgresql），有效（防止RIPE基准测试中的所有攻击），高效：在SPEC CPU2006上，CPS的C开销平均为C，C / C ++的开销为1.9％，而CPI的C开销为2.9％，C / C ++则为8.4％。 CPI和CPS的原型实现可以从<a target="_blank" rel="noopener" href="http://levee.epfl.ch获得./">http://levee.epfl.ch获得。</a></p>
+<p>Introduction</p>
+<p>Systems code is often written in memory-unsafe languages; this makes it prone to memory errors that are the primary attack vector to subvert systems. Attackers exploit bugs, such as buffer overflows and use after free errors, to cause memory corruption that enables them to steal sensitive data or execute code that gives them control over a remote system [44, 37, 12, 8].</p>
+<p>系统代码通常以内存不安全的语言编写； 这使得它容易产生内存错误，而内存错误是颠覆系统的主要攻击手段。 攻击者利用诸如缓冲区溢出之类的错误并在释放错误后使用错误，导致内存损坏，从而使他们能够窃取敏感数据或执行使他们能够控制远程系统的代码[44、37、12、8]。</p>
+<p>Our goal is to secure systems code against all controlflow hijack attacks, which is how attackers gain remote control of victim systems. Low-level languages like C/C++ offer many benefits to system programmers, and we want to make these languages safe to use while preserving their benefits, not the least of which is performance. Before expecting any security guarantees from systems we must first secure their building blocks.</p>
+<p>我们的目标是保护系统代码免受所有控制流劫持攻击的侵害，这是攻击者如何获得受害系统的远程控制。 诸如C / C ++之类的低级语言为系统程序员提供了许多好处，我们希望使这些语言安全使用，同时保留它们的好处，其中至少包括性能。 在期望系统提供任何安全保证之前，我们必须首先保护其构造块。</p>
+<p>There exist a few protection mechanism that can reduce the risk of control-flow hijack attacks without imposing undue overheads. Data Execution Prevention (DEP) [48] uses memory page protection to prevent the introduction of new executable code into a running application. Unfortunately, DEP is defeated by code reuse attacks, such as return-to-libc [37] and return oriented programming (ROP) [44, 8], which can construct arbitrary Turing-complete computations by chaining together existing code fragments of the original application. Address Space Layout Randomization (ASLR) [40] places code and data segments at random addresses, making it harder for attackers to reuse existing code for execution. Alas, ASLR is defeated by pointer leaks, side channels attacks [22], and just-in-time code reuse attacks [45]. Finally, stack cookies [14] protect return addresses on the stack, but only against continuous buffer overflows.</p>
+<p>存在一些保护机制，可以降低控制流劫持攻击的风险而又不会造成不必要的开销。 数据执行保护（DEP）[48]使用内存页保护来防止将新的可执行代码引入正在运行的应用程序中。 不幸的是，DEP被代码重用攻击所击败，例如return-to-libc [37]和面向返回的编程（ROP）[44，8]，它们可以通过将原始的现有代码片段链接在一起来构造任意的Turing-complete计算。 应用。 地址空间布局随机化（ASLR）[40]将代码和数据段放置在随机地址上，这使攻击者更难以重用现有代码来执行。 AS，ASLR被指针泄漏，边通道攻击[22]和即时代码重用攻击[45]击败。 最终，堆栈Cookie [14]保护了堆栈，但仅针对连续的缓冲区溢出。</p>
+<p>Many defenses can improve upon these shortcomings but have not seen wide adoption because of the overheads they impose. According to a recent survey [46], these solutions are incomplete and bypassable via sophisticated attacks and/or require source code modifications and/or incur high performance overhead. These approaches typically employ language modifications [25, 36], compiler modifications [13, 3, 17, 34, 43], or rewrite machine code binaries [38, 54, 53]. Control-flow integrity protection (CFI) [1, 29, 53, 54, 39], a widely studied technique for practical protection against control-flow hijack attacks, was recently demonstrated to be ineffective [19, 15, 9].</p>
+<p>许多防御措施可以改善这些缺点，但由于它们带来的间接费用，并未得到广泛采用。 根据最近的一项调查[46]，这些解决方案是不完整的，无法通过复杂的攻击绕过它们，并且/或者需要对源代码进行修改和/或产生高性能开销。 这些方法通常采用语言修改[25、36]，编译器修改[13、3、17、34、43]或重写机器代码二进制文件[38、54、53]。 控制流完整性保护（CFI）[1、29、53、54、39]是一种针对防控制流劫持攻击的实用保护措施，目前得到广泛研究，但效果不佳[19、15、9]。</p>
+<p>Existing techniques cannot both guarantee protection against control-flow hijacks and impose low overhead and no changes to how the programmer writes code. For example, memory-safe languages guarantee that a memory object can only be accessed using pointers properly based on that specific object, which in turn makes control-flow hijacks impossible, but this approach requires runtime checks to verify the temporal and spatial correctness of pointer computations, which inevitably induces undue overhead, especially when retrofitted to memory-unsafe languages. For example, state-of-the-art memory safety implementations for C/C+ incur ≥ 2× 1148 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14) USENIX Association overhead [35]. We observe that, in order to render control-flow hijacks impossible, it is sufficient to guarantee the integrity of code pointers, i.e., those that are used to determine the targets of indirect control-flow transfers (indirect calls, indirect jumps, or returns).</p>
+<p>现有技术既不能保证针对控制流劫持的保护，又不能带来低开销，并且不能改变程序员编写代码的方式。例如，内存安全语言保证只能基于特定对象使用指针正确访问内存对象，这又使控制流劫持成为不可能，但是这种方法需要运行时检查以验证指针的时间和空间正确性计算，不可避免地会引起不必要的开销，尤其是当改型为不安全的内存语言时。例如，最新的C / C +内存安全性实现≥2×1148，第11届USENIX操作系统设计和实现研讨会（OSDI ’14）USENIX协会开销[35]。我们观察到，为了使控制流劫持成为不可能，足以保证代码指针的完整性，即那些用于确定间接控制流传输（间接调用，间接跳转或返回）目标的指针）。</p>
+<p>This paper introduces code-pointer integrity (CPI), a way to enforce precise, deterministic memory safety for all code pointers in a program. The key idea is to split process memory into a safe region and a regular region. CPI uses static analysis to identify the set of memory objects that must be protected in order to guarantee memory safety for code pointers. This set includes all memory objects that contain code pointers and all data pointers used to access code pointers indirectly. All objects in the set are then stored in the safe region, and the region is isolated from the rest of the address space (e.g., via hardware protection). The safe region can only be accessed via memory operations that are proven at compile time to be safe or that are safety-checked at runtime. The regular region is just like normal process memory: it can be accessed without runtime checks and, thus, with no overhead. In typical programs, the accesses to the safe region represent only a small fraction of all memory accesses (6.5% of all pointer operations in SPEC CPU2006 need protection). Existing memory safety techniques cannot efficiently protect only a subset of memory objects in a program, rather they require instrumenting all potentially dangerous pointer operations.</p>
+<p>本文介绍了代码指针完整性（CPI），这是一种对程序中所有代码指针实施精确的确定性内存安全性的方法。关键思想是将过程内存分为安全区域和常规区域。 CPI使用静态分析来识别必须保护的一组内存对象，以确保代码指针的内存安全。该集合包括所有包含代码指针的内存对象和所有用于间接访问代码指针的数据指针。然后将集合中的所有对象存储在安全区域中，并将该区域与地址空间的其余部分隔离开（例如，通过硬件保护）。只能通过在编译时被证明是安全的或在运行时经过安全检查的存储器操作来访问安全区域。常规区域就像普通的进程内存一样：无需运行时检查即可访问它，因此没有开销。在典型程序中，对安全区域的访问仅占所有内存访问的一小部分（SPEC CPU2006中所有指针操作的6.5％需要保护）。现有的内存安全技术不能有效地仅保护程序中一部分存储对象，而是需要对所有潜在危险的指针操作进行检测。</p>
+<p>CPI fully protects the program against all control-flow hijack attacks that exploit program memory bugs. CPI requires no changes to how programmers write code, since it automatically instruments pointer accesses at compile time. CPI achieves low overhead by selectively instrumenting only those pointer accesses that are necessary and sufficient to formally guarantee the integrity of all code pointers. The CPI approach can also be used for data, e.g., to selectively protect sensitive information like the process UIDs in a kernel.</p>
+<p>CPI完全保护程序免受所有利用程序内存错误的控制流劫持攻击。 CPI不需要更改程序员编写代码的方式，因为它在编译时会自动检测指针访问。 CPI通过选择性地仅检测那些必须并足以正式保证所有代码指针的完整性的指针访问来实现较低的开销。 CPI方法也可以用于数据，例如，以选择性地保护敏感信息，例如内核中的进程UID。</p>
+<p>We also introduce code-pointer separation (CPS), a relaxed variant of CPI that is better suited for code with abundant virtual function pointers. In CPS, all code pointers are placed in the safe region, but pointers used to access code pointers indirectly are left in the regular region (such as pointers to C++ objects that contain virtual functions). Unlike CPI, CPS may allow certain controlflow hijack attacks, but it still offers stronger guarantees than CFI and incurs negligible overhead.</p>
+<p>我们还引入了代码指针分隔（CPS），这是CPI的一种宽松形式，它更适合于具有大量虚函数指针的代码。 在CPS中，所有代码指针都放置在安全区域中，但是用于间接访问代码指针的指针则保留在常规区域中（例如，指向包含虚拟函数的C ++对象的指针）。 与CPI不同，CPS可能允许某些控制流劫持攻击，但与CFI相比，它仍然提供更强大的保证，并且产生的开销可忽略不计。</p>
+<p>Our experimental evaluation shows that our proposed approach imposes sufficiently low overhead to be deployable in production. For example, CPS incurs an average overhead of 1.2% on the C programs in SPEC CPU2006 and 1.9% for all C/C++ programs. CPI incurs on average 2.9% overhead for the C programs and 8.4% across all C/C++ SPEC CPU2006 programs. CPI and CPS are effective: they prevent 100% of the attacks in the RIPE benchmark and the recent attacks [19, 15, 9] that bypass CFI, ASLR, DEP, and all other Microsoft Windows protections. We compile and run with CPI/CPS a complete FreeBSD distribution along with ≥ 100 widely used packages, demonstrating that the approach is practical. This paper makes the following contributions:</p>
+<ol>
+<li>Definition of two new program properties that offer a security-benefit to enforcement-cost ratio superior to the state of the art: code-pointer integrity (CPI) guarantees control flow cannot be hijacked via memory bugs, and code-pointer separation (CPS) provides stronger security guarantees than control-flow integrity but at negligible cost.</li>
+<li>An efficient compiler-based implementation of CPI and CPS for unmodified C/C++ code.</li>
+<li>The first practical and complete OS distribution (based on FreeBSD) with full protection built-in against control-flow hijack attacks. In the rest of the paper we introduce our threat model (§2), describe CPI and CPS (§3), present our implementation (§4), evaluate our approach (§5), discuss related work (§6), and conclude (§7). We formalize the CPI enforcement mechanism and provide a sketch of its correctness proof in Appendix A.</li>
+</ol>
+<p>我们的实验评估表明，我们提出的方法施加了足够低的开销，可以在生产中部署。例如，CPS在SPEC CPU2006中的C程序上平均产生1.2％的开销，而在所有C / C ++程序上产生1.9％的平均开销。 C程序的CPI平均开销为2.9％，而所有C / C ++ SPEC CPU2006程序的CPI开销为8.4％。 CPI和CPS有效：它们可以防止RIPE基准测试中的100％攻击以及最近绕过CFI，ASLR，DEP和所有其他Microsoft Windows保护的攻击[19、15、9]。我们使用CPI / CPS编译并运行了完整的FreeBSD发行版以及≥100个广泛使用的软件包，这表明该方法是可行的。本文做出了以下贡献：</p>
+<ol>
+<li>定义了两个新的程序属性，它们提供了优于现有技术的安全性与执行成本之比：代码指针完整性（CPI）确保控制流不会通过内存错误被劫持，并且代码指针分离（ CPS）提供了比控制流完整性更强的安全性保证，但成本却微不足道。</li>
+<li>针对未经修改的C / C ++代码的CPI和CPS的基于编译器的高效实现。</li>
+<li>首次实用，完整的OS发行版（基于FreeBSD），并内置了针对控制流劫持攻击的全面保护。在本文的其余部分中，我们介绍了威胁模型（§2），描述了CPI和CPS（§3），介绍了我们的实施（§4），评估了我们的方法（§5），讨论了相关工作（§6），以及结论（第7节）。我们正式制定了CPI执行机制，并在附录A中提供了其正确性证明的草图。</li>
+</ol>
+<p>Threat Model</p>
+<p>This paper is concerned solely with control-flow hijack attacks, namely ones that give the attacker control of the instruction pointer. The purpose of this type of attack is to divert control flow to a location that would not otherwise be reachable in that same context, had the program not been compromised. Examples of such attacks include forcing a program to jump (i) to a location where the attacker injected shell code, (ii) to the start of a chain of return-oriented program fragments (“gadgets”), or (iii) to a function that performs an undesirable action in the given context, such as calling system() with attackersupplied arguments. Data-only attacks, i.e., that modify or leak unprotected non-control data, are out of scope.</p>
+<p>本文仅涉及控制流劫持攻击，即使攻击者控制指令指针的攻击。 这种攻击的目的是将控制流转移到如果程序未受到破坏的情况下在同一上下文中无法访问的位置。 此类攻击的示例包括强迫程序跳至（i）攻击者注入外壳程序代码的位置，（ii）跳到面向返回的程序片段（“小工具”）链的开头，或（iii）跳到 在给定上下文中执行不良操作的函数，例如使用攻击者提供的参数调用system（）。 仅数据攻击（即修改或泄漏不受保护的非控制数据）不在范围内。</p>
+<p>We assume powerful yet realistic attacker capabilities: full control over process memory, but no ability to modify the code segment. Attackers can carry out arbitrary memory reads and writes by exploiting input-controlled memory corruption errors in the program. They cannot modify the code segment, because the corresponding pages are marked read-executable and not writable, and they cannot control the program loading process. These assumptions ensure the integrity of the original program code instrumented at compile time, and enable the program loader to safely set up the isolation between the safe and regular memory regions. Our assumptions are consistent with prior work in this area.</p>
+<p>我们假设攻击者具有强大而现实的功能：完全控制进程内存，但不能修改代码段。 攻击者可以通过利用程序中输入控制的内存损坏错误来执行任意内存读取和写入操作。 它们不能修改代码段，因为相应的页面被标记为可执行和不可写的，并且它们无法控制程序的加载过程。 这些假设可确保在编译时检测到的原始程序代码的完整性，并使程序加载器能够安全地建立安全内存区域与常规内存区域之间的隔离。 我们的假设与该领域的先前工作是一致的。</p>
+<p>Design</p>
+<p>We now present the terminology used to describe our design, then define the code-pointer integrity property (§3.1), describe the corresponding enforcement mechanism (§3.2), and define a relaxed version that trades some security guarantees for performance (§3.3). We further formalize the CPI enforcement mechanism and sketch its correctness proof in Appendix A.</p>
+<p>现在，我们介绍用于描述我们的设计的术语，然后定义代码指针完整性属性（第3.1节），描述相应的强制机制（第3.2节），并定义一个宽松的版本，该版本为性能进行一些安全保证（第3.3节） 。 我们进一步规范了CPI执行机制，并在附录A中概述了其正确性证明。</p>
+<p>We say a pointer dereference is safe iff the memory it accesses lies within the target object on which the dereferenced pointer is based. A target object can either be a memory object or a control flow destination. By pointer dereference we mean accessing the memory targeted by the pointer, either to read/write it (for data pointers) or to transfer control flow to its location (for code pointers). A memory object is a language-specific unit of memory allocation, such as a global or local variable, a dynamically allocated memory block, or a sub-object of a larger memory object (e.g., a field in a struct). Memory objects can also be program-specific, e.g., when using custom memory allocators. A control flow destination is a location in the code, such as the start of a function or a return location. A target object always has a well defined lifetime; for example, freeing an array and allocating a new one with the same address creates a different object.</p>
+<p>我们说指针取消引用是安全的，因为它访问的内存位于取消引用的指针所基于的目标对象之内。 目标对象可以是内存对象或控制流目标。 通过指针解除引用，我们的意思是访问指针所针对的内存，以对其进行读/写（对于数据指针）或将控制流转移到其位置（对于代码指针）。 存储器对象是特定于语言的存储器分配单元，例如全局或局部变量，动态分配的存储器块或较大的存储器对象的子对象（例如，结构中的字段）。 内存对象也可以是特定于程序的，例如在使用自定义内存分配器时。 控制流目的地是代码中的位置，例如功能的开始或返回位置。 目标对象始终具有明确定义的生存期。 例如，释放一个数组并分配一个具有相同地址的新数组会创建一个不同的对象。</p>
+<p>We say a pointer is based on a target object X iff the pointer is obtained at runtime by (i) allocating X on the heap, (ii) explicitly taking the address of X, if X is allocated statically, such as a local or global variable, or is a control flow target (including return locations, whose addresses are implicitly taken and stored on the stack when calling a function), (iii) taking the address of a sub-object y of X (e.g., a field in the X struct), or (iv) computinga pointer expression (e.g., pointer arithmetic, array indexing, or simply copying a pointer) involving operands that are either themselves based on object X or are not pointers. This is slightly stricter version of C99’s “based on” definition: we ensure that each pointer is based on at most one object.</p>
+<p>我们说一个指针是基于目标对象X的，前提是该指针是在运行时通过以下方式获得的：（i）在堆上分配X，（ii）如果X是静态分配的，则显式采用X的地址，例如局部或全局分配 变量，或者是控制流目标（包括返回位置，其返回地址在调用函数时被隐式获取并存储在堆栈中），（iii）获取X子对象y的地址（例如， X结构），或（iv）计算涉及其自身基于对象X或非指针的操作数的指针表达式（例如，指针算术，数组索引或简单地复制指针）。 这是C99的“基于”定义的较严格版本：我们确保每个指针最多基于一个对象。</p>
+<p>The execution of a program is memory-safe iff all pointer dereferences in the execution are safe. A program is memory-safe iff all its possible executions (for all inputs) are memory-safe. This definition is consistent with the state of the art for C/C++, such as SoftBounds+CETS [34, 35]. Precise memory safety enforcement [34, 36, 25] tracks the based-on information for each pointer in a program, to check the safety of each pointer dereference according to the definition above; the detection of an unsafe dereference aborts the program.</p>
+<p>程序的执行是内存安全的，前提是执行中的所有指针取消引用都是安全的。 如果程序的所有可能执行（对于所有输入）都是内存安全的，则它是内存安全的。 此定义与C / C ++的最新技术水平一致，例如SoftBounds + CETS [34，35]。 精确的内存安全执行[34、36、25]跟踪程序中每个指针的基础信息，以根据上面的定义检查每个指针取消引用的安全性； 检测到不安全的取消引用将中止程序。</p>
+<p>3.1 The Code-Pointer Integrity (CPI) Property</p>
+<p>A program execution satisfies the code-pointer integrity property iff all its dereferences that either dereference or access sensitive pointers are safe. Sensitive pointers are code pointers and pointers that may later be used to access sensitive pointers. Note that the sensitive pointer definition is recursive, as illustrated in Fig. 1. According to case (iv) of the based-on definition above, dereferencing a pointer to a pointer will correspondingly propagate the based-on information; e.g., an expression *p = &amp;q copies the result of &amp;q, which is a pointer based on q, to a location pointed to by p, and associates the basedon metadata with that location. Hence, the integrity of the based-on metadata associated with sensitive pointers requires that pointers used to update sensitive pointers be sensitive as well (we discuss implications of relaxing this definition in §3.3). The notion of a sensitive pointer is dynamic. For example, a void* pointer 2 in Fig. 1 is sensitive when it points at another sensitive pointer at run time, but it is not sensitive when it points to an integer.</p>
+<p><img src="img/fig1.png" alt="header"></p>
+<p>如果程序的所有取消引用都是安全的，则程序执行将满足代码指针的完整性属性。敏感指针是代码指针和以后可用于访问敏感指针的指针。注意，敏感指针定义是递归的，如图1所示。根据上面的基于定义的情况（iv），将指针解引用为指针将相应地传播基于信息；因此，将指针解引用为指针是可行的。例如，表达式* p =＆q将基于q的指针＆q的结果复制到p指向的位置，并将基于基础的元数据与该位置相关联。因此，与敏感指针相关联的基于元数据的完整性要求用于更新敏感指针的指针也必须是敏感的（我们将在§3.3中讨论放宽此定义的含义）。敏感指针的概念是动态的。例如，图1中的void *指针2在运行时指向另一个敏感指针时，它是敏感的，但是当指向整数时，它是不敏感的。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
